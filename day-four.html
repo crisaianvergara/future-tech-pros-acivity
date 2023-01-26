@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 - Basic Javascript</title>
+    <style>
+        body {
+            background-color: rgb(167, 167, 167);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        div {
+            background: rgb(247, 247, 247);
+            border-radius: 5px;
+            margin: 100px auto;
+            padding: 50px;
+            text-align: center;
+            width: 500px;
+        }
+        h3 {
+            font-size: 2rem;
+        }
+        #result {
+            margin: 50px 0;
+            display: block;
+            font-size: 3rem;
+        }
+        .btn {
+            background-color: rgb(59, 138, 59);
+            border: 0;
+            color: #FFF;
+            border-radius: 5px;
+            padding: 0 40px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h3>Increment / Decrement</h3>
+        <span id = "result">0</span>
+        <button class="btn" onclick="increment()">
+            <p><i class="fa-solid fa-plus fa-3x"></i></p>
+        </button>
+        <button class="btn" onclick="decrement()">
+            <p><i class="fa-solid fa-minus fa-3x"></i></p>
+        </button>
+    </div>
+</body>
+    <script>
+        let count = 0;
+
+        const increment = () => {
+            count++;
+            document.getElementById("result").innerHTML = count;
+        }
+
+        const decrement = () => {
+            count--;
+            document.getElementById("result").innerHTML = count;
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/543a846626.js" crossorigin="anonymous"></script>
+</html>
