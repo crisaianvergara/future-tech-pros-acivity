@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.4rem;
+    list-style: none;
+    margin: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Nav */
+nav {
+    background-color: #7286D3;
+    height: 80px;
+}
+
+.nav-brand {
+    color: #fff;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 80px;
+    padding: 0 100px;
+}
+
+ul {
+    float: right;
+    margin-right: 82px;
+}
+
+li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+a {
+    border-radius: 3px;
+    color: #fff;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+}
+
+a.active, a:hover {
+    background-color: #8EA7E9;
+    transition: .5s;
+} 
+
+.check-btn {
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+}
+
+#check {
+    display: none;
+}
+
+/* Content */
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1.7rem;
+    justify-content: center;
+    margin: 5% auto;
+    max-width: 980px;
+}
+
+.card {
+    background-color: #FFF2F2;
+    border-radius: 10px;
+    padding: 0 0 2%;
+    width: 250px;
+    min-height: 100px;
+}
+
+.card-title {
+    background-color: #E5E0FF;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+h3 {
+    font-weight: 900;
+    letter-spacing: 2px;
+    padding: 1rem;
+}
+
+p {
+    padding: 1rem;
+}
+
+/* Media Queries */
+
+@media (max-width: 952px) {
+    .nav-brand {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+
+    .check-btn {
+        display: block;
+    }
+
+    ul {
+        background-color: #8EA7E9;
+        height: 100vh;
+        left: -100%;
+        position: fixed;
+        text-align: center;
+        top: 80px;
+        transition: all .5s;
+        width: 100%;
+    }
+
+    li {
+        display: block;
+        line-height: 30px;
+        margin: 50px 0;
+    }
+
+    a {
+        color: #7286D3;
+        font-size: 20px;
+    }
+
+    a:hover, a.active {
+        background: none;
+        color: #fff;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+
+@media (max-width: 528px) {
+    .container {
+        display: block;
+        padding: 2rem;
+    }
+
+    .card {
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+}
